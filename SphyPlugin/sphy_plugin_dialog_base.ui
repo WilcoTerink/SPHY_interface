@@ -1,0 +1,2732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>sphyDialog</class>
+ <widget class="QDialog" name="sphyDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>825</width>
+    <height>497</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SPHY model interface</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QPushButton" name="newButton">
+       <property name="text">
+        <string>New project</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="openButton">
+       <property name="text">
+        <string>Open project</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="text">
+        <string>Save</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveAsButton">
+       <property name="text">
+        <string>Save As</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QTabWidget" name="tab">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="generalSettingsTab">
+        <attribute name="title">
+         <string>General settings</string>
+        </attribute>
+        <widget class="QGroupBox" name="foldersGroupBox">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>9</y>
+           <width>781</width>
+           <height>111</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Folder selection</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_14">
+            <item>
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>SPHY folder</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="sphyPathLineEdit">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="selectSphyPathButton">
+              <property name="text">
+               <string>Select sphy.py folder</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Input folder</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="inputPathLineEdit">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="selectInputPathButton">
+              <property name="text">
+               <string>Select input folder</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Ouput folder</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="outputPathLineEdit">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="selectOutputPathButton">
+              <property name="text">
+               <string>Select output folder</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QGroupBox" name="periodSimulationGroupBox">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>140</y>
+           <width>381</width>
+           <height>55</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Period of simulation</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_84">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="startDateLabel">
+              <property name="text">
+               <string>Start date</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="startDateEdit">
+              <property name="displayFormat">
+               <string>dd-MMM-yyyy</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="endDateLabel">
+              <property name="text">
+               <string>End date</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDateEdit" name="endDateEdit">
+              <property name="date">
+               <date>
+                <year>2005</year>
+                <month>12</month>
+                <day>31</day>
+               </date>
+              </property>
+              <property name="displayFormat">
+               <string>dd-MMM-yyyy</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QGroupBox" name="catchmentSettingsGroupBox">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>220</y>
+           <width>781</width>
+           <height>167</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Catchment settings</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_15">
+            <item>
+             <widget class="QLabel" name="cloneMapLabel">
+              <property name="text">
+               <string>Clone map</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="cloneMapLineEdit">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="selectCloneMapFileButton">
+              <property name="text">
+               <string>Select map</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_17">
+            <item>
+             <widget class="QLabel" name="demMapLabel">
+              <property name="text">
+               <string>DEM map [MASL]</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="demMapLineEdit">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="selectDemMapFileButton">
+              <property name="text">
+               <string>Select map</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_18">
+            <item>
+             <widget class="QLabel" name="slopeMapLabel">
+              <property name="text">
+               <string>Slope map [-]</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="slopeMapLineEdit">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="selectSlopeMapFileButton">
+              <property name="text">
+               <string>Select map</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_19">
+            <item>
+             <widget class="QLabel" name="subbasinMapLabel">
+              <property name="text">
+               <string>Sub-basins map</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="subbasinMapLineEdit">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="selectSubbasinMapFileButton">
+              <property name="text">
+               <string>Select map</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_20">
+            <item>
+             <widget class="QLabel" name="stationsMapLabel">
+              <property name="text">
+               <string>Stations map</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="stationsMapLineEdit">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="selectStationsMapFileButton">
+              <property name="text">
+               <string>Select map</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QGroupBox" name="coordinateSystemGroupBox">
+         <property name="geometry">
+          <rect>
+           <x>410</x>
+           <y>140</y>
+           <width>231</width>
+           <height>53</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Coordinate system</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="0">
+           <widget class="QLabel" name="crsLabel">
+            <property name="text">
+             <string>EPSG:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="crsSpinBox">
+            <property name="maximum">
+             <number>1000000000</number>
+            </property>
+            <property name="value">
+             <number>4326</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="climateTab">
+        <attribute name="title">
+         <string>Climate</string>
+        </attribute>
+        <layout class="QFormLayout" name="formLayout">
+         <item row="1" column="0">
+          <widget class="QGroupBox" name="groupBox">
+           <property name="title">
+            <string>Meteorological parameters</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_18">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_24">
+              <item>
+               <widget class="QLabel" name="latitudeZonesMapLabel">
+                <property name="text">
+                 <string>Latitude zones</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="latitudeZonesMapLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectLatitudeZonesMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_26">
+              <item>
+               <widget class="QLabel" name="solarConstantLabel">
+                <property name="text">
+                 <string>Solar constant [MJ/m2/min]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>10</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="solarConstantDoubleSpinBox">
+                <property name="decimals">
+                 <number>4</number>
+                </property>
+                <property name="singleStep">
+                 <double>0.001000000000000</double>
+                </property>
+                <property name="value">
+                 <double>0.082000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <widget class="QGroupBox" name="MeteoMapSeriesGroupBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="title">
+            <string>Meteorological forcing map-series</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_16">
+              <item>
+               <widget class="QLabel" name="precMapSeriesLabel">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Precipitation [mm/d]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="precMapSeriesLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectPrecMapSeriesButton">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Select map-series (*.001)</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_21">
+              <item>
+               <widget class="QLabel" name="avgTempMapSeriesLabel">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Avg. daily temperature [°C]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="avgTempMapSeriesLineEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectAvgTempMapSeriesButton">
+                <property name="text">
+                 <string>Select map-series (*.001)</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_22">
+              <item>
+               <widget class="QLabel" name="maxTempMapSeriesLabel">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Max. daily temperature [°C]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="maxTempMapSeriesLineEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectMaxTempMapSeriesButton">
+                <property name="text">
+                 <string>Select map-series (*.001)</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_23">
+              <item>
+               <widget class="QLabel" name="minTempMapSeriesLabel">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Min. daily temperature [°C]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="minTempMapSeriesLineEdit">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectMinTempMapSeriesButton">
+                <property name="text">
+                 <string>Select map-series (*.001)</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="soilsTab">
+        <attribute name="title">
+         <string>Soils</string>
+        </attribute>
+        <layout class="QFormLayout" name="formLayout_3">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+         </property>
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="title">
+            <string>Rootzone physical maps</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_25">
+              <item>
+               <widget class="QLabel" name="rootFieldCapMapLabel">
+                <property name="text">
+                 <string>Field capacity [mm/mm]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="rootFieldCapLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectRootFieldCapMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_27">
+              <item>
+               <widget class="QLabel" name="rootSatMapLabel">
+                <property name="text">
+                 <string>Saturated content [mm/mm]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="rootSatLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectRootSatMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_28">
+              <item>
+               <widget class="QLabel" name="rootPermWiltMapLabel">
+                <property name="text">
+                 <string>Permanent wilting
+point [mm/mm]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="rootPermWiltLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectRootPermWiltMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_29">
+              <item>
+               <widget class="QLabel" name="rootWiltMapLabel">
+                <property name="text">
+                 <string>Wilting point [mm/mm]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="rootWiltLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectRootWiltMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_30">
+              <item>
+               <widget class="QLabel" name="rootSatCondMapLabel">
+                <property name="text">
+                 <string>Saturated hydraulic
+conductivity [mm/d]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="rootSatCondLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectRootSatCondMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="title">
+            <string>Subzone physical maps</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_31">
+              <item>
+               <widget class="QLabel" name="subFieldCapMapLabel">
+                <property name="text">
+                 <string>Field capacity [mm/mm]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="subFieldCapLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectSubFieldCapMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_32">
+              <item>
+               <widget class="QLabel" name="subSatMapLabel">
+                <property name="text">
+                 <string>Saturated content [mm/mm]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="subSatLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectSubSatMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_33">
+              <item>
+               <widget class="QLabel" name="subSatCondMapLabel">
+                <property name="text">
+                 <string>Saturated hydraulic
+conductivity [mm/d]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="subSatCondLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectSubSatCondMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QGroupBox" name="groupBox_4">
+           <property name="title">
+            <string>Root- and subzone parameters</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout_5">
+            <property name="fieldGrowthPolicy">
+             <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+            </property>
+            <item row="0" column="0" colspan="2">
+             <layout class="QHBoxLayout" name="horizontalLayout_36">
+              <item>
+               <widget class="QGroupBox" name="groupBox_5">
+                <property name="title">
+                 <string>Rootlayer thickness [spatial map or single value]</string>
+                </property>
+                <layout class="QFormLayout" name="formLayout_6">
+                 <item row="0" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_35">
+                   <item>
+                    <widget class="QRadioButton" name="rootDepthSingleRadioButton">
+                     <property name="text">
+                      <string>Single value [mm]</string>
+                     </property>
+                     <property name="checked">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="rootDepthSpinBox">
+                     <property name="minimum">
+                      <number>10</number>
+                     </property>
+                     <property name="maximum">
+                      <number>1000000000</number>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="1" column="0" colspan="2">
+                  <layout class="QHBoxLayout" name="horizontalLayout_34">
+                   <item>
+                    <widget class="QRadioButton" name="rootDepthMapRadioButton">
+                     <property name="text">
+                      <string>Spatial map [mm]</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="rootDepthLineEdit">
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="selectRootDepthMapButton">
+                     <property name="text">
+                      <string>Select map</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_6">
+                <property name="title">
+                 <string>Sublayer thickness [spatial map or single value]</string>
+                </property>
+                <layout class="QFormLayout" name="formLayout_7">
+                 <item row="0" column="0">
+                  <layout class="QHBoxLayout" name="horizontalLayout_37">
+                   <item>
+                    <widget class="QRadioButton" name="subDepthSingleRadioButton">
+                     <property name="text">
+                      <string>Single value [mm]</string>
+                     </property>
+                     <property name="checked">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="subDepthSpinBox">
+                     <property name="minimum">
+                      <number>10</number>
+                     </property>
+                     <property name="maximum">
+                      <number>1000000000</number>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item row="1" column="0" colspan="2">
+                  <layout class="QHBoxLayout" name="horizontalLayout_38">
+                   <item>
+                    <widget class="QRadioButton" name="subDepthMapRadioButton">
+                     <property name="text">
+                      <string>Spatial map [mm]</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="subDepthLineEdit">
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="selectSubDepthMapButton">
+                     <property name="text">
+                      <string>Select map</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_39">
+              <item>
+               <widget class="QLabel" name="maxCapRiseLabel">
+                <property name="text">
+                 <string>Maximum capillary rise [mm/d]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="maxCapRiseSpinBox"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="groundwaterTab">
+        <attribute name="title">
+         <string>Groundwater</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox_7">
+           <property name="title">
+            <string>Groundwater volume settings</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout_16">
+            <item row="0" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_8">
+              <property name="title">
+               <string>Groundwater layer thickness [spatial map or single value]</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_8">
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_41">
+                 <item>
+                  <widget class="QRadioButton" name="gwDepthSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="gwDepthSpinBox">
+                   <property name="maximum">
+                    <number>1000000000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>100</number>
+                   </property>
+                   <property name="value">
+                    <number>5000</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <layout class="QHBoxLayout" name="horizontalLayout_40">
+                 <item>
+                  <widget class="QRadioButton" name="gwDepthMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="gwDepthLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectGwDepthMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_9">
+              <property name="title">
+               <string>Saturated groundwater content [spatial map or single value]</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_10">
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_42">
+                 <item>
+                  <widget class="QRadioButton" name="gwSatSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="gwSatSpinBox">
+                   <property name="maximum">
+                    <number>1000000000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>100</number>
+                   </property>
+                   <property name="value">
+                    <number>3000</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <layout class="QHBoxLayout" name="horizontalLayout_43">
+                 <item>
+                  <widget class="QRadioButton" name="gwSatMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="gwSatLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectGwSatMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_10">
+              <property name="title">
+               <string>Initial groundwater storage [spatial map or single value]</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_11">
+               <property name="fieldGrowthPolicy">
+                <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+               </property>
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_44">
+                 <item>
+                  <widget class="QRadioButton" name="gwInitSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="gwInitSpinBox">
+                   <property name="maximum">
+                    <number>1000000000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>100</number>
+                   </property>
+                   <property name="value">
+                    <number>2000</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <layout class="QHBoxLayout" name="horizontalLayout_47">
+                 <item>
+                  <widget class="QRadioButton" name="gwInitMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="gwInitLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectGwInitMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QGroupBox" name="groupBox_11">
+           <property name="title">
+            <string>Parameters</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout_9">
+            <item row="0" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_12">
+              <property name="title">
+               <string>Baseflow threshold [spatial map or single value]</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_13">
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_48">
+                 <item>
+                  <widget class="QRadioButton" name="baseThreshSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="baseThreshSpinBox">
+                   <property name="maximum">
+                    <number>1000000000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>100</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <layout class="QHBoxLayout" name="horizontalLayout_49">
+                 <item>
+                  <widget class="QRadioButton" name="baseThreshMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="baseThreshLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectBaseThreshMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_13">
+              <property name="title">
+               <string>deltaGw [spatial map or single value]</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_12">
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_50">
+                 <item>
+                  <widget class="QRadioButton" name="deltaGwSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [d]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="deltaGwSpinBox">
+                   <property name="minimum">
+                    <number>1</number>
+                   </property>
+                   <property name="maximum">
+                    <number>1000000000</number>
+                   </property>
+                   <property name="value">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <layout class="QHBoxLayout" name="horizontalLayout_51">
+                 <item>
+                  <widget class="QRadioButton" name="deltaGwMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [d]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="deltaGwLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectDeltaGwMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="2" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_14">
+              <property name="title">
+               <string>alphaGw [spatial map or single value]</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_14">
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_53">
+                 <item>
+                  <widget class="QRadioButton" name="alphaGwSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [-]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="alphaGwDoubleSpinBox">
+                   <property name="minimum">
+                    <double>0.010000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.010000000000000</double>
+                   </property>
+                   <property name="value">
+                    <double>0.500000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <layout class="QHBoxLayout" name="horizontalLayout_54">
+                 <item>
+                  <widget class="QRadioButton" name="alphaGwMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [-]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="alphaGwLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectAlphaGwMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="landUseTab">
+        <attribute name="title">
+         <string>Land use</string>
+        </attribute>
+        <layout class="QFormLayout" name="formLayout_15">
+         <item row="1" column="0" colspan="2">
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLabel" name="kcTableLabel">
+             <property name="text">
+              <string>Crop coefficients lookup table</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="kcTableLineEdit">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="selectKcTableButton">
+             <property name="text">
+              <string>Select table</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="0" colspan="2">
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="landUseMapLabel">
+             <property name="text">
+              <string>Land use map</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="landUseLineEdit">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="selectLandUseMapButton">
+             <property name="text">
+              <string>Select map</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="glaciersTab">
+        <attribute name="title">
+         <string>Glaciers</string>
+        </attribute>
+        <layout class="QFormLayout" name="formLayout_17">
+         <item row="0" column="0" colspan="2">
+          <widget class="QGroupBox" name="groupBox_15">
+           <property name="title">
+            <string>Glacier fraction settings</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <item>
+               <widget class="QLabel" name="initGlacFracLabel">
+                <property name="text">
+                 <string>Initial glacier fraction [-]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="initGlacFracLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectInitGlacFracMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QLabel" name="cIFracLabel">
+                <property name="text">
+                 <string>Clean ice glacier fraction [-]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="cIFracLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectCIFracMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <item>
+               <widget class="QLabel" name="dBFracLabel">
+                <property name="text">
+                 <string>Debris covered glacier fraction [-]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="dBFracLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectDBFracMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_19">
+              <property name="title">
+               <string>GlacF [spatial map or single value]</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_2">
+               <item row="0" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout_59">
+                 <item>
+                  <widget class="QRadioButton" name="glacRoFracMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [-]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="glacRoFracLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectGlacRoFracMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_56">
+                 <item>
+                  <widget class="QRadioButton" name="glacRoFracSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [-]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="glacRoFracDoubleSpinBox">
+                   <property name="maximum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.010000000000000</double>
+                   </property>
+                   <property name="value">
+                    <double>0.900000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QGroupBox" name="groupBox_16">
+           <property name="title">
+            <string>Glacier degree-day-factors</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QGroupBox" name="groupBox_18">
+              <property name="title">
+               <string>DDFDG [spatial map or single value]</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_71">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_57">
+                 <item>
+                  <widget class="QRadioButton" name="DDFDGSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [mm degree-1 day-1]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="DDFDGDoubleSpinBox">
+                   <property name="minimum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>20.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.500000000000000</double>
+                   </property>
+                   <property name="value">
+                    <double>7.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_58">
+                 <item>
+                  <widget class="QRadioButton" name="DDFDGMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [mm degree-1 day-1]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="DDFDGLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectDDFDGMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_17">
+              <property name="title">
+               <string>DDFG [spatial map or single value]</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_72">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <widget class="QRadioButton" name="DDFGSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [mm degree-1 day-1]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="DDFGDoubleSpinBox">
+                   <property name="minimum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>20.000000000000000</double>
+                   </property>
+                   <property name="value">
+                    <double>7.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_55">
+                 <item>
+                  <widget class="QRadioButton" name="DDFGMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [mm degree-1 day-1]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="DDFGLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectDDFGMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="snowTab">
+        <attribute name="title">
+         <string>Snow</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item>
+          <widget class="QGroupBox" name="groupBox_20">
+           <property name="title">
+            <string>Snow storage</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QGroupBox" name="groupBox_21">
+              <property name="title">
+               <string>SnowIni [spatial map or single value]</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_73">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_61">
+                 <item>
+                  <widget class="QRadioButton" name="snowIniSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="snowIniSpinBox">
+                   <property name="maximum">
+                    <number>1000000000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>100</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_62">
+                 <item>
+                  <widget class="QRadioButton" name="snowIniMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="snowIniLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectSnowIniMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_22">
+              <property name="title">
+               <string>SnowWatStore [spatial map or single value]</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_74">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_63">
+                 <item>
+                  <widget class="QRadioButton" name="sWatStoreSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sWatStoreSpinBox">
+                   <property name="maximum">
+                    <number>1000000000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>100</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_64">
+                 <item>
+                  <widget class="QRadioButton" name="sWatStoreMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [mm]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="sWatStoreLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectSWatStoreMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_23">
+              <property name="title">
+               <string>SnowSC [spatial map or single value]</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_75">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_65">
+                 <item>
+                  <widget class="QRadioButton" name="snowSCSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [-]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="snowSCDoubleSpinBox">
+                   <property name="maximum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.010000000000000</double>
+                   </property>
+                   <property name="value">
+                    <double>0.500000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_66">
+                 <item>
+                  <widget class="QRadioButton" name="snowSCMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [-]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="snowSCLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectSnowSCMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_24">
+           <property name="title">
+            <string>Snow parameters</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout_18">
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_67">
+              <item>
+               <widget class="QLabel" name="tcritLabel">
+                <property name="text">
+                 <string>Tcrit</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="tcritDoubleSpinBox">
+                <property name="minimum">
+                 <double>-100.000000000000000</double>
+                </property>
+                <property name="maximum">
+                 <double>100.000000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.500000000000000</double>
+                </property>
+                <property name="value">
+                 <double>2.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_25">
+              <property name="title">
+               <string>DDFS [spatial map or single value]</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_76">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_68">
+                 <item>
+                  <widget class="QRadioButton" name="DDFSSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [mm degree-1 day-1]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="DDFSDoubleSpinBox">
+                   <property name="minimum">
+                    <double>1.000000000000000</double>
+                   </property>
+                   <property name="maximum">
+                    <double>20.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>0.500000000000000</double>
+                   </property>
+                   <property name="value">
+                    <double>7.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_69">
+                 <item>
+                  <widget class="QRadioButton" name="DDFSMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [-]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="DDFSLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectDDFSMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="routingTab">
+        <attribute name="title">
+         <string>Routing</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="flowDirMapLabel">
+             <property name="text">
+              <string>Flow direction</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="flowDirLineEdit">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="selecFlowDirMapButton">
+             <property name="text">
+              <string>Select map</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox_26">
+           <property name="title">
+            <string>Recession coefficient [spatial map or single value]</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QRadioButton" name="kxSingleRadioButton">
+                <property name="text">
+                 <string>Single value [-]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="kxDoubleSpinBox">
+                <property name="minimum">
+                 <double>0.010000000000000</double>
+                </property>
+                <property name="maximum">
+                 <double>0.990000000000000</double>
+                </property>
+                <property name="singleStep">
+                 <double>0.050000000000000</double>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_45">
+              <item>
+               <widget class="QRadioButton" name="kxMapRadioButton">
+                <property name="text">
+                 <string>Spatial map [-]</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="kxLineEdit">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="selectKxMapButton">
+                <property name="text">
+                 <string>Select map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QGroupBox" name="groupBox_27">
+           <property name="title">
+            <string>Initial values [spatial map or single value]</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QGroupBox" name="groupBox_28">
+              <property name="title">
+               <string>Routed total runoff</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_16">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_46">
+                 <item>
+                  <widget class="QRadioButton" name="qraInitSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [m3/s]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="qraInitDoubleSpinBox">
+                   <property name="maximum">
+                    <double>1000000000.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_52">
+                 <item>
+                  <widget class="QRadioButton" name="qraInitMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [m3/s]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="qraInitLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectQraInitMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QGroupBox" name="groupBox_31">
+              <property name="title">
+               <string>Routed snow runoff</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_12">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_79">
+                 <item>
+                  <widget class="QRadioButton" name="snowRaInitSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [m3/s]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="snowRaInitDoubleSpinBox">
+                   <property name="maximum">
+                    <double>1000000000.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_80">
+                 <item>
+                  <widget class="QRadioButton" name="snowRaInitMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [m3/s]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="snowRaInitLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectSnowRaInitMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QGroupBox" name="groupBox_29">
+              <property name="title">
+               <string>Routed rainfall runoff</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_17">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_60">
+                 <item>
+                  <widget class="QRadioButton" name="rainRaInitSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [m3/s]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="rainRaInitDoubleSpinBox">
+                   <property name="maximum">
+                    <double>1000000000.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_70">
+                 <item>
+                  <widget class="QRadioButton" name="rainRaInitMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [m3/s]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="rainRaInitLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectRainRaInitMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QGroupBox" name="groupBox_32">
+              <property name="title">
+               <string>Routed glacier runoff</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_20">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_81">
+                 <item>
+                  <widget class="QRadioButton" name="glacRaInitSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [m3/s]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="glacRaInitDoubleSpinBox">
+                   <property name="maximum">
+                    <double>1000000000.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_82">
+                 <item>
+                  <widget class="QRadioButton" name="glacRaInitMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [m3/s]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="glacRaInitLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectGlacRaInitMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QGroupBox" name="groupBox_30">
+              <property name="title">
+               <string>Routed baseflow runoff</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_19">
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_77">
+                 <item>
+                  <widget class="QRadioButton" name="basRaInitSingleRadioButton">
+                   <property name="text">
+                    <string>Single value [m3/s]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDoubleSpinBox" name="basRaInitDoubleSpinBox">
+                   <property name="maximum">
+                    <double>1000000000.000000000000000</double>
+                   </property>
+                   <property name="singleStep">
+                    <double>10.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_78">
+                 <item>
+                  <widget class="QRadioButton" name="basRaInitMapRadioButton">
+                   <property name="text">
+                    <string>Spatial map [m3/s]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="basRaInitLineEdit">
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QToolButton" name="selectBasRaInitMapButton">
+                   <property name="text">
+                    <string>Select map</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="reportTab">
+        <attribute name="title">
+         <string>Report options</string>
+        </attribute>
+        <widget class="QListWidget" name="reportListWidget">
+         <property name="geometry">
+          <rect>
+           <x>9</x>
+           <y>9</y>
+           <width>256</width>
+           <height>401</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QCheckBox" name="mmRepFlagCheckBox">
+         <property name="geometry">
+          <rect>
+           <x>271</x>
+           <y>190</y>
+           <width>200</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Report mm fluxes for basin averages</string>
+         </property>
+        </widget>
+        <widget class="QGroupBox" name="modelReportGroupBox">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>271</x>
+           <y>9</y>
+           <width>113</width>
+           <height>163</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Model output settings:</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_24">
+          <item>
+           <layout class="QGridLayout" name="reportLayout">
+            <item row="0" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout_22">
+              <item>
+               <widget class="QLabel" name="mapLabel">
+                <property name="text">
+                 <string>Map-series output</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="dailyMapReportCheckBox">
+                <property name="text">
+                 <string>Daily</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="monthlyMapReportCheckBox">
+                <property name="text">
+                 <string>Monthly</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="annualMapReportCheckBox">
+                <property name="text">
+                 <string>Annual</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout_23">
+              <item>
+               <widget class="QLabel" name="tssLabel">
+                <property name="text">
+                 <string>Time-series output</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="dailyTSSReportCheckBox">
+                <property name="text">
+                 <string>Daily</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="runModelTab">
+        <attribute name="title">
+         <string>Run Model</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_85">
+             <item>
+              <widget class="QLabel" name="pcrBinPathLabel">
+               <property name="text">
+                <string>PCRaster bin PATH</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="pcrBinPathLineEdit">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="selectPcrBinPathButton">
+               <property name="text">
+                <string>Select path</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_83">
+             <item>
+              <widget class="QLabel" name="pythonExeLabel">
+               <property name="text">
+                <string>python.exe</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="pythonExeLineEdit">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QToolButton" name="selectPythonExeButton">
+               <property name="text">
+                <string>Select python.exe</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="1">
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <item>
+            <widget class="QPushButton" name="runModelButton">
+             <property name="text">
+              <string>Run model</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="cancelModelRunButton">
+             <property name="text">
+              <string>Cancel model run</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QTextEdit" name="modelRunLogTextEdit"/>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QProgressBar" name="modelRunProgressBar">
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="visualizeTab">
+        <attribute name="title">
+         <string>Visualize results</string>
+        </attribute>
+        <widget class="QGroupBox" name="groupBox_33">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>191</width>
+           <height>411</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Time-series output</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_13">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Select a time-series from the list
+below and click the button to select
+ a point in the map to show the
+time-series</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="timeSeriesListWidget"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="showTimeSeriesButton">
+            <property name="text">
+             <string>Show time-series</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_34">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>10</y>
+           <width>601</width>
+           <height>411</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Map-series output</string>
+         </property>
+         <widget class="QWidget" name="horizontalLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>581</width>
+            <height>371</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="QGroupBox" name="groupBox_35">
+             <property name="title">
+              <string>Daily maps</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_27">
+              <item>
+               <widget class="QListWidget" name="dMapSeriesListWidget"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="showDMapSeriesButton">
+                <property name="text">
+                 <string>Show daily map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_36">
+             <property name="title">
+              <string>Monthly maps</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_26">
+              <item>
+               <widget class="QListWidget" name="mMapSeriesListWidget"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="showMMapSeriesButton">
+                <property name="text">
+                 <string>Show monthly map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_37">
+             <property name="title">
+              <string>Annual maps</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_25">
+              <item>
+               <widget class="QListWidget" name="yMapSeriesListWidget"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="showYMapSeriesButton">
+                <property name="text">
+                 <string>Show annual map</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>581</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Select a daily, monthly, or annual map from one of the three lists below, and click the button to show the map.</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
